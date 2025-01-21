@@ -7,7 +7,7 @@ describe("LamdaTest Suite", () => {
     //User enters Personal Details
     cy.get('input[name="firstname"]').type("David");
     cy.get('input[name="lastname"]').type("Jones");
-    cy.get('input[type="email"]').type("Derek@mailinator.com");
+    cy.get('input[type="email"]').type("Dek@mailinator.com");
     cy.get('input[type="tel"]').type("+2348020895412");
     cy.get('input[id="input-password"]').type("20December!");
     cy.get('input[name="confirm"]').type("20December!");
@@ -18,6 +18,6 @@ describe("LamdaTest Suite", () => {
     cy.get(
       'img[src="https://ecommerce-playground.lambdatest.io/image/catalog/maza/svg/image2vector.svg"]'
     ).click();
-    
+
   });
 });
