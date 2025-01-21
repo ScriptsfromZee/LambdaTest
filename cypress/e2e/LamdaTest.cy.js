@@ -18,6 +18,12 @@ describe("LamdaTest Suite", () => {
     cy.get(
       'img[src="https://ecommerce-playground.lambdatest.io/image/catalog/maza/svg/image2vector.svg"]'
     ).click();
-
   });
+
+  // User uses the Search Box 
+  cy.get('input[name="search"]').type('ipad Nano')
+  cy.get('button[type="submit"]').click()
+
+
+  
 });
