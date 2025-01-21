@@ -23,6 +23,14 @@ describe("LamdaTest Suite", () => {
   // User uses the Search Box 
   cy.get('input[name="search"]').type('ipad Nano')
   cy.get('button[type="submit"]').click()
+  cy.contains('ipad Nano').scrollIntoView().should('be.visible').click()
+  cy.get("div[id='entry_216841'] i[class='fas fa-plus-circle']").click()
+  cy.get("div[id='entry_216841'] i[class='fas fa-plus-circle']").click()
+  cy.get('button[title="Buy now"]').click()
+
+  // User Fills in Billing Details 
+  cy.get('input[id="input-payment-firstname"]').type('David')
+  cy.get('input[id="input-payment-lastname"]').type('Jones')
 
 
   
