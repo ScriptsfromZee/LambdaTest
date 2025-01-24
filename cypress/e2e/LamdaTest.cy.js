@@ -7,7 +7,7 @@ describe("LamdaTest Suite", () => {
     //User enters Personal Details
     cy.get('input[name="firstname"]').type("David");
     cy.get('input[name="lastname"]').type("Jones");
-    cy.get('input[type="email"]').type("Tatty@mailinator.com");
+    cy.get('input[type="email"]').type("Yatty@mailinator.com");
     cy.get('input[type="tel"]').type("+2348020895412");
     cy.get('input[id="input-password"]').type("20December!");
     cy.get('input[name="confirm"]').type("20December!");
@@ -20,9 +20,9 @@ describe("LamdaTest Suite", () => {
     ).click(); // This clicks on the Logo taking the user back to the homepage 
 
   // User uses the Search Box and Orders a Product
-  cy.get("div[id='entry_217822'] input[placeholder='Search For Products']").type('ipad Nano');
+  cy.get("div[id='entry_217822'] input[placeholder='Search For Products']").type('iPod nano');
   cy.get('button[class="type-text"]').click()
-  cy.contains('ipad Nano').scrollIntoView().should('be.visible').click()
+  cy.contains('iPod nano').scrollIntoView().should('be.visible').click()
   cy.get("div[id='entry_216841'] i[class='fas fa-plus-circle']").click()
   cy.get("div[id='entry_216841'] i[class='fas fa-plus-circle']").click()
   cy.get('button[title="Buy now"]').click()
