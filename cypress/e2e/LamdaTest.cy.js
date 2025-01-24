@@ -5,9 +5,10 @@ describe("LamdaTest Suite", () => {
     )
 
     //User enters Personal Details
-    cy.get('input[name="firstname"]').type("David");
-    cy.get('input[name="lastname"]').type("Jones");
-    cy.get('input[type="email"]').type("Yatty@mailinator.com");
+    cy.get('input[name="firstname"]').type("Vanessa");
+    cy.get('input[name="lastname"]').type("Morgan");
+    cy.get('input[type="email"]').type("Vatty@mailinator.com"); 
+    // if you run into an error on your run, you will have to change the email to proceed
     cy.get('input[type="tel"]').type("+2348020895412");
     cy.get('input[id="input-password"]').type("20December!");
     cy.get('input[name="confirm"]').type("20December!");
@@ -23,8 +24,8 @@ describe("LamdaTest Suite", () => {
   cy.get("div[id='entry_217822'] input[placeholder='Search For Products']").type('iPod nano');
   cy.get('button[class="type-text"]').click()
   cy.contains('iPod nano').scrollIntoView().should('be.visible').click()
-  cy.get("div[id='entry_216841'] i[class='fas fa-plus-circle']").click()
-  cy.get("div[id='entry_216841'] i[class='fas fa-plus-circle']").click()
+  cy.get("a[id='mz-product-grid-image-36-212469'] div[class='carousel-item active'] img[title='iPod Nano']").click()
+  cy.get('button[title="Buy now"]').click()
   cy.get('button[title="Buy now"]').click()
 
   // User Fills in Billing Details 
@@ -35,12 +36,11 @@ describe("LamdaTest Suite", () => {
   cy.get('input[name="address_2"]').type('55 Lagos Express Way')
   cy.get('label[for="input-payment-city"]').type('Ikeja')
   cy.get('input[name="postcode"]').type('500102')
-  cy.get('label[for="input-payment-country"]').select('Nigeria')
-  cy.get('select[id="input-payment-zone"]').select('Lagos')
-  cy.get('text area[id="input-comment"]').type('I have always wanted to get an Ipod')
-  cy.get(
-    'a[href="https://ecommerce-playground.lambdatest.io/index.php?route=information/information/agree&information_id=5"]'
-  ) .click()
+  cy.get('#input-payment-country').select('Nigeria')
+  cy.get('#input-payment-zone').select('Lagos')
+  cy.get('#input-comment').type('I have always wanted to get an Ipod') // Adds a comment about the order 
+  cy.get("label[for='input-account-agree']") .click()
+  cy.get("label[for='input-agree']").click()
   cy.get('button[id="button-save"]').click()
 });
 });
