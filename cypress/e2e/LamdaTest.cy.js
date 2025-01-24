@@ -2,12 +2,12 @@ describe("LamdaTest Suite", () => {
   it("User Sign Up", () => {
     cy.visit(
       "https://ecommerce-playground.lambdatest.io/index.php?route=account/register"
-    );
+    )
 
     //User enters Personal Details
     cy.get('input[name="firstname"]').type("David");
     cy.get('input[name="lastname"]').type("Jones");
-    cy.get('input[type="email"]').type("Dek@mailinator.com");
+    cy.get('input[type="email"]').type("Zeek@mailinator.com");
     cy.get('input[type="tel"]').type("+2348020895412");
     cy.get('input[id="input-password"]').type("20December!");
     cy.get('input[name="confirm"]').type("20December!");
@@ -17,8 +17,7 @@ describe("LamdaTest Suite", () => {
     cy.get('a[class="btn btn-primary"]').click();
     cy.get(
       'img[src="https://ecommerce-playground.lambdatest.io/image/catalog/maza/svg/image2vector.svg"]'
-    ).click();
-  });
+    ).click(); // This clicks on the Logo taking the user back to the homepage 
 
   // User uses the Search Box and Orders a Product
   cy.get('input[name="search"]').type('ipad Nano')
@@ -43,9 +42,5 @@ describe("LamdaTest Suite", () => {
     'a[href="https://ecommerce-playground.lambdatest.io/index.php?route=information/information/agree&information_id=5"]'
   ) .click()
   cy.get('button[id="button-save"]').click()
-  
-  
-
-
-  
+});
 });
