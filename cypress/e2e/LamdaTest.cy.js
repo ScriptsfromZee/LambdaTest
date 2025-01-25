@@ -7,8 +7,8 @@ describe("LamdaTest Suite", () => {
     //User enters Personal Details
     cy.get('input[name="firstname"]').type("Vanessa");
     cy.get('input[name="lastname"]').type("Morgan");
-    cy.get('input[type="email"]').type("Vatty@mailinator.com"); 
-    // if you run into an error on your run, you will have to change the email to proceed
+    cy.get('input[type="email"]').type("Borganj@mailinator.com"); 
+    // if you run into an error on your run, you will have to change the email to proceed for the next run
     cy.get('input[type="tel"]').type("+2348020895412");
     cy.get('input[id="input-password"]').type("20December!");
     cy.get('input[name="confirm"]').type("20December!");
@@ -38,9 +38,8 @@ describe("LamdaTest Suite", () => {
   cy.get('input[name="postcode"]').type('500102')
   cy.get('#input-payment-country').select('Nigeria')
   cy.get('#input-payment-zone').select('Lagos')
-  cy.get('#input-comment').type('I have always wanted to get an Ipod') // Adds a comment about the order 
-  cy.get("label[for='input-account-agree']") .click()
-  cy.get("label[for='input-agree']").click()
+  cy.get('#input-comment').type('I have always wanted to get an iPod') // Adds a comment about the order 
+  cy.get('label[for="input-agree"]').click();
   cy.get('button[id="button-save"]').click()
 });
-});
+})
