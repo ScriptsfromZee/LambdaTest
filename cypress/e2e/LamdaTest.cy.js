@@ -2,7 +2,7 @@ describe("LamdaTest Suite", () => {
   const user = {
     firstName: "Vanessa",
     lastName: "Morgan",
-    email: "five@mailinator.com", // Change email if needed for subsequent runs
+    email: "hive@mailinator.com", // Change email if needed for subsequent runs
     phone: "+2348020895412",
     password: "20December!",
     billing: {
@@ -16,8 +16,8 @@ describe("LamdaTest Suite", () => {
       country: "Nigeria",
       zone: "Lagos",
       comment: "I have always wanted to get an iPod because my folks could not afford one"
-    }
-  };
+    }  
+  }
 
   beforeEach(() => {
     cy.visit("https://ecommerce-playground.lambdatest.io/index.php?route=account/register");
