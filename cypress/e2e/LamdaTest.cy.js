@@ -7,7 +7,7 @@ describe("LamdaTest Suite", () => {
     //User enters Personal Details
     cy.get('input[name="firstname"]').type("Vanessa");
     cy.get('input[name="lastname"]').type("Morgan");
-    cy.get('input[type="email"]').type("Morganv@mailinator.com"); 
+    cy.get('input[type="email"]').type("forgive@mailinator.com"); 
     // if you run into an error on your run, you will have to change the email to proceed for the next run
     cy.get('input[type="tel"]').type("+2348020895412");
     cy.get('input[id="input-password"]').type("20December!");
@@ -25,8 +25,8 @@ describe("LamdaTest Suite", () => {
   cy.get('button[class="type-text"]').click()
   cy.contains('iPod nano').scrollIntoView().should('be.visible').click()
   cy.get("a[id='mz-product-grid-image-36-212469'] div[class='carousel-item active'] img[title='iPod Nano']").click()
-  cy.get('button[title="Buy now"]').click()
-  cy.get('button[title="Buy now"]').click()
+  cy.get('button[title="Buy now"]').click() // This adds the item to cart
+  cy.get('button[title="Buy now"]').click() // This increases the cart quantity to 2 by clicking the button again
 
   // User Fills in Billing Details 
   cy.get('input[id="input-payment-firstname"]').type('David')
