@@ -7,7 +7,7 @@ describe("LamdaTest Suite", () => {
     //User enters Personal Details
     cy.get('input[name="firstname"]').type("Vanessa");
     cy.get('input[name="lastname"]').type("Morgan");
-    cy.get('input[type="email"]').type("Borganj@mailinator.com"); 
+    cy.get('input[type="email"]').type("Morganv@mailinator.com"); 
     // if you run into an error on your run, you will have to change the email to proceed for the next run
     cy.get('input[type="tel"]').type("+2348020895412");
     cy.get('input[id="input-password"]').type("20December!");
