@@ -5,7 +5,7 @@ describe("LamdaTest Suite", () => {
     cy.visit("https://ecommerce-playground.lambdatest.io/index.php?route=account/register");
     cy.get('input[name="firstname"]').type("Vanessa");
     cy.get('input[name="lastname"]').type("Morgan");
-    cy.get('input[type="email"]').type("forrgive@mailinator.com"); // Change email if needed for subsequent runs
+    cy.get('input[type="email"]').type("frgive@mailinator.com"); // Change email if needed for subsequent runs
     cy.get('input[type="tel"]').type("+2348020895412");
     cy.get('input[id="input-password"]').type("20December!");
     cy.get('input[name="confirm"]').type("20December!");
@@ -55,5 +55,17 @@ describe("LamdaTest Suite", () => {
 
    // Save billing details
    cy.get('button[id="button-save"]').click();
-  });
+  
+  // Navigate to Home
+  cy.get('img[src="https://ecommerce-playground.lambdatest.io/image/catalog/maza/svg/image2vector.svg"]').click();
+  // Searches for the product in the Search bar
+  cy.get("div[id='entry_217822'] input[placeholder='Search For Products']").type("HP LP3065");
+  cy.get('button[class="type-text"]').click()
+  cy.get("a[id='mz-product-grid-image-47-212469'] div[class='carousel-item active'] img[title='HP LP3065']").click()
+  for (let i = 0; i < 2; i++) {
+    cy.get('button[title="Buy now"]').click(); // this increase cart quantity to 2 
+  }
+  cy.get("div[id='entry_217825'] div[class='icon svg-icon'] svg").click()
+
+});
 });
