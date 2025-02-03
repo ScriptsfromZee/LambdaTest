@@ -33,7 +33,7 @@ describe("LamdaTest Suite", () => {
     
     // Add item to cart and increase quantity
     for (let i = 0; i < 2; i++) {
-      cy.get('button[title="Buy now"]').click(); // this increase cart quantity to 2 
+      cy.get('button[title="Buy now"]').click(); // this increases cart quantity to 2 
     }
 
     // User Fills in Billing Details Directly
