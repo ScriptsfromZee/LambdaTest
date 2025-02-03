@@ -1,4 +1,4 @@
-# Lambdatest
+# LambdaTest
 
 LambdaTest is a sophisticated web application designed to simulate e-commerce sites, providing users with an interactive and realistic experience.
 
