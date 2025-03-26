@@ -1,0 +1,16 @@
+{
+  "name": "lambdatest",
+  "version": "1.0.0",
+  "description": "LambdaTest is a sophisticated web application designed to simulate e-commerce sites, providing users with an interactive and realistic experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "cypress": "^14.2.0"
+  }
+}
